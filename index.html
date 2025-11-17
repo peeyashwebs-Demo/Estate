@@ -15,17 +15,23 @@
     />
   </head>
   <body>
-    <!-- Header / Navigation -->
     <header>
       <div class="container">
         <div class="logo"><a href="index.html">DreamHomes</a></div>
-        <nav>
+
+        <!-- Mobile Menu Button -->
+        <div class="menu-btn">
+          <i class="fas fa-bars"></i>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="nav">
           <ul>
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="index.html">About</a></li>
-            <li><a href="index.html">Listings</a></li>
-            <li><a href="index.html">Blog</a></li>
-            <li><a href="index.html">Contact</a></li>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Listings</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact</a></li>
           </ul>
         </nav>
       </div>
@@ -191,6 +197,18 @@
       </div>
     </section>
 
+    <section class="rent-houses">
+      <div class="container">
+        <h2>Houses for Rent</h2>
+        <div class="rent-slider auto-slide">
+          <div><img src="images/rent1.jpg" /></div>
+          <div><img src="images/rent2.jpg" /></div>
+          <div><img src="images/rent3.jpg" /></div>
+          <div><img src="images/rent4.jpg" /></div>
+        </div>
+      </div>
+    </section>
+
     <!-- Testimonials -->
     <section class="testimonials">
       <div class="container">
@@ -284,6 +302,14 @@
             }
           });
         });
+      });
+    </script>
+    <script>
+      const menuBtn = document.querySelector(".menu-btn");
+      const nav = document.querySelector(".nav");
+
+      menuBtn.addEventListener("click", () => {
+        nav.classList.toggle("active");
       });
     </script>
   </body>

@@ -51,67 +51,49 @@ a {
   background: #1e7e34;
 }
 
-/* Header Navigation */
-header {
-  background: #fff;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  padding: 15px 0;
-}
-
-header .container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-header .logo a {
-  font-size: 26px;
-  font-weight: 700;
-  color: #28a745;
-  text-decoration: none;
-}
-
-header nav ul {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-header nav ul li {
-  margin-left: 30px; /* space between menu items */
-}
-
-header nav ul li a {
-  text-decoration: none;
+/* Hide menu button on desktop */
+.menu-btn {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
   color: #333;
-  font-size: 18px; /* bigger text */
-  font-weight: 600; /* bold */
-  transition: color 0.3s;
 }
 
-header nav ul li a:hover,
-header nav ul li a.active {
-  color: #28a745;
+/* NAV DESKTOP DEFAULT */
+.nav ul {
+  display: flex;
+  gap: 30px;
 }
 
-/* Responsive for Mobile */
-@media (max-width: 768px) {
-  header .container {
-    flex-direction: column;
-    align-items: flex-start;
+@media(max-width: 768px) {
+
+  /* Show hamburger */
+  .menu-btn {
+    display: block;
   }
 
-  header nav ul {
+  /* hide nav on mobile */
+  .nav {
+    display: none;
+    width: 100%;
+    background: #fff;
+    padding: 15px 0;
+  }
+
+  /* When active */
+  .nav.active {
+    display: block;
+  }
+
+  .nav ul {
     flex-direction: column;
     width: 100%;
   }
 
-  header nav ul li {
-    margin: 15px 0;
+  .nav ul li {
+    margin: 10px 0;
   }
 }
-
 
 /* Hero Section */
 .hero {
@@ -1003,6 +985,46 @@ transition: 0.3s;
 
 .btn:hover {
 background: #155a95;
+}
+
+.slide {
+  background-size: cover !important; 
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+
+@media(max-width: 768px) {
+  .hero {
+    height: 60vh; /* prevents cropping */
+  }
+}
+
+.rent-houses {
+  padding: 60px 0;
+}
+
+.rent-slider {
+  display: flex;
+  gap: 20px;
+  overflow: hidden;
+  animation: slideRent 25s linear infinite;
+}
+
+.rent-slider img {
+  width: 350px;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+@keyframes slideRent {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.rent-slider:hover {
+  animation-play-state: paused;
 }
 
 
