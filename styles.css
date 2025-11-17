@@ -549,6 +549,10 @@ body {
   line-height: 1.6;
 }
 
+body, html {
+  overflow-x: hidden;
+}
+
 .container {
   width: 90%;
   max-width: 1200px;
@@ -1026,6 +1030,20 @@ background: #155a95;
 .rent-slider:hover {
   animation-play-state: paused;
 }
+
+.property-card {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.property-card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
 
 
 /* FOOTER */
