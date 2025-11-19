@@ -193,7 +193,7 @@
       /* Mobile nav overlay */
       nav {
         display: none;
-        position: fixed; /* overlay on top */
+        position: fixed; /* overlay on top of content */
         top: 0;
         left: 0;
         width: 100%;
@@ -201,8 +201,8 @@
         background: rgba(255, 255, 255, 0.98);
         flex-direction: column;
         z-index: 9999;
-        overflow-y: auto; /* allow scrolling if too tall */
-        padding: 60px 16px 16px 16px; /* top padding for menu button */
+        overflow-y: auto; /* scroll if menu too tall */
+        padding: 60px 16px 16px 16px; /* top padding for hamburger */
       }
 
       nav ul {
@@ -484,7 +484,7 @@
         <div class="logo"><a href="index.html">DreamHomes</a></div>
 
         <!-- Mobile Menu Button -->
-        <div class="menu-btn">
+        <div class="menu-icon">
           <i class="fas fa-bars"></i>
         </div>
 
