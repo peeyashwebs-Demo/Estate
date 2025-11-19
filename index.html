@@ -190,20 +190,27 @@
         z-index: 9999;
       }
 
+      /* Mobile nav overlay */
       nav {
         display: none;
-        flex-direction: row;
-        background: white;
-        position: absolute;
-        top: 70px;
-        right: 10px;
-        width: 200px;
-        padding: 15px;
-        border-radius: 10px;
-        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+        position: fixed; /* FIX: overlay instead of pushing content */
+        top: 0;
+        left: 0;
+        width: 100%; /* full width */
+        height: 100%; /* full height */
+        background: rgba(255, 255, 255, 0.98); /* slightly transparent */
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+        overflow-y: auto; /* allow scrolling if too many items */
+        padding: 40px 16px;
       }
-
-      /* Show nav when active */
+      nav ul {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+      }
       nav.active {
         display: flex !important;
       }
